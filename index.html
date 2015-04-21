@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Bubble TeaTime Locator - London</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./css/custboostrapV2.css">
+	</head>
+	<body>
+		<!-- Header Section -->
+        <div class="section section-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">Bubblin' Bubble Tea Locator<br>
+                            <small>Because bubble Tea is brilliant and everyone should taste it!</small>
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+					<!-- Search bar with knockout trigger -->
+                    <div class="col-md-offset-2 col-md-9">
+						<input data-bind="value: filterText, valueUpdate: 'afterkeydown'" type="text" class="form-control" placeholder="Filter the awesome recommendation!">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+					<!-- Map DIV is here -->
+					<div class="col-md-8" id="map-canvas"></div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="jumbotron">
+									<!-- Right Nav Containing AJAX list items -->
+                                    <h2 class="text-center">Peter's Picks:</h2>
+									<!-- Knockout calls from appcode script -->
+									<ul class="list-group" data-bind="foreach: search_fav">
+										<!-- Forach loop of items in location -->
+										<li data-bind="text: name, click: $parent.locationSelected, css: {'active': isActive}" class="list-group-item"></li>
+									</ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- Bottom blue footer bar -->
+		<footer class="section section-info ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1>Nanodegree Portfolio
+                            <small>&nbsp;By BelcherDEV</small>
+                        </h1>
+                        <p>BelcherDEV is a site focused on showing off some of the cool things I
+                            have been tinkering with over the years. Please come check it out at
+                            <a href="http://www.belcherdev.co.uk">belcherdev.co.uk</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-info text-right">
+                            <br>
+                            <br>
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12 hidden-xs text-right">
+                                <a href="https://www.linkedin.com/profile/view?id=69942467"><i class="fa fa-3x fa-fw text-inverse fa-linkedin"></i></a>
+                                <a href="https://www.belcherdev.co.uk"><i class="fa fa-3x fa-fw text-inverse fa-cloud"></i></a>
+                                <a href="https://www.github.com/pbelch"><i class="fa fa-3x fa-flip-horizontal fa-fw fa-github text-inverse"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+		<!-- Local copy of the script called by maps api + key -->
+		<script type="text/javascript" src="./script/api.js"></script>
+		<!-- Standard JQuery Lib (v2.1.3) -->
+		<script type="text/javascript" src="./script/jquery.js"></script>
+		<!-- KnockoutJS implementaion (v3.3.0) -->
+		<script type="text/javascript" src="./script/knockout.js"></script>
+		<!-- Core app functionality code -->
+		<script type="text/javascript" src="./script/appcode.js"></script>
+    </body>
+</html>

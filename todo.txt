@@ -1,0 +1,14 @@
+To Do:
+- Chnage names of 'filtertext' objects
+-Chnage variable names in appcode
+-Check Foresquare API info is mine
+-appcode line spacing
+
+Reference:
+Boostrap CSS Implementaion - pingendo
+Knockout JS
+Google maps API Documentaion
+Foresquare API
+Awesome Font
+Stack Overflow
+Dust-Me Selectors firefox plugin(CSS Cleanup)
